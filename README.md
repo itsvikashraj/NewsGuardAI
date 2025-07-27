@@ -2,7 +2,7 @@
 
 **NewsGuardAI** is an AI-driven web application I built to tackle the growing problem of misinformation in our digital world. My goal? To empower users to quickly check if a news article is real or fake, boosting everyone's media literacy in the process.
 
-https://youtu.be/ZfFggAQS1SY
+[![NewsGuardAI Demo Video](http://img.youtube.com/vi/ZffgqAQS1SY/hqdefault.jpg)](https://youtu.be/ZfFggAQS1SY)
 
 ### Why This Project Matters
 
