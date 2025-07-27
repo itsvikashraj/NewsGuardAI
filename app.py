@@ -9,8 +9,8 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 app = Flask(__name__)
 
-vectorizer = pickle.load(open('model\vectorizer.pkl', 'rb'))
-model = pickle.load(open('model\model.pkl', 'rb'))
+vectorizer = pickle.load(open(r'model\vectorizer.pkl', 'rb'))
+model = pickle.load(open(r'model\model.pkl', 'rb'))
 
 
 def extract_article(url):
