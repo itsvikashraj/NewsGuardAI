@@ -9,8 +9,8 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 app = Flask(__name__)
 
-vectorizer = pickle.load(open(r'model\vectorizer.pkl', 'rb'))
-model = pickle.load(open(r'model\model.pkl', 'rb'))
+vectorizer = pickle.load(open('model/vectorizer.pkl', 'rb'))
+model = pickle.load(open(r'model/model.pkl', 'rb'))
 
 
 def extract_article(url):
@@ -31,13 +31,13 @@ def extract_article(url):
 
 def clean_text(text):
   text = text.lower()
-  text = re.sub('\[.*?\]','',text)
-  text = re.sub('\\W', " ", text)
-  text = re.sub('https?://\S+|www\.\S+', '', text)
-  text = re.sub('<.*?>+', '', text)
-  text = re.sub('[%s]' % re.escape(string.punctuation), '', text)
-  text = re.sub('\n', '',text)
-  text = re.sub('\w*\d\w*', '', text)
+  text = re.sub(r'\[.*?\]','',text)
+  text = re.sub(r'\\W', " ", text)
+  text = re.sub(r'https?://\S+|www\.\S+', '', text)
+  text = re.sub(r'<.*?>+', '', text)
+  text = re.sub(r'[%s]' % re.escape(string.punctuation), '', text)
+  text = re.sub(r'\n', '',text)
+  text = re.sub(r'\w*\d\w*', '', text)
   return text.strip()
 
 @app.route('/',methods = ['GET','POST'])
